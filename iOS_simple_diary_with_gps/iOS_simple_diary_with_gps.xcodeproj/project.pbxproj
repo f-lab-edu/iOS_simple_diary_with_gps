@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC0C7B3C2C512F5200BD3583 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B3B2C512F5200BD3583 /* AppDelegate.swift */; };
+		EC0C7B3E2C512F5200BD3583 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B3D2C512F5200BD3583 /* SceneDelegate.swift */; };
+		EC0C7B402C512F5200BD3583 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B3F2C512F5200BD3583 /* ViewController.swift */; };
+		EC0C7B432C512F5200BD3583 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EC0C7B422C512F5200BD3583 /* Base */; };
+		EC0C7B452C512F5200BD3583 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC0C7B442C512F5200BD3583 /* Assets.xcassets */; };
+		EC0C7B482C512F5200BD3583 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EC0C7B472C512F5200BD3583 /* Base */; };
+		EC0C7B532C512F5300BD3583 /* iOS_simple_diary_with_gpsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B522C512F5300BD3583 /* iOS_simple_diary_with_gpsTests.swift */; };
+		EC0C7B5D2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B5C2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.swift */; };
+		EC0C7B5F2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B5E2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC0C7B4F2C512F5300BD3583 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC0C7B302C512F5200BD3583 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC0C7B372C512F5200BD3583;
+			remoteInfo = iOS_simple_diary_with_gps;
+		};
+		EC0C7B592C512F5300BD3583 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC0C7B302C512F5200BD3583 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC0C7B372C512F5200BD3583;
+			remoteInfo = iOS_simple_diary_with_gps;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC0C7B382C512F5200BD3583 /* iOS_simple_diary_with_gps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_simple_diary_with_gps.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC0C7B3B2C512F5200BD3583 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC0C7B3D2C512F5200BD3583 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EC0C7B3F2C512F5200BD3583 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC0C7B422C512F5200BD3583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC0C7B442C512F5200BD3583 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC0C7B472C512F5200BD3583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC0C7B492C512F5200BD3583 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC0C7B4E2C512F5300BD3583 /* iOS_simple_diary_with_gpsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_simple_diary_with_gpsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC0C7B522C512F5300BD3583 /* iOS_simple_diary_with_gpsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_simple_diary_with_gpsTests.swift; sourceTree = "<group>"; };
+		EC0C7B582C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_simple_diary_with_gpsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC0C7B5C2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_simple_diary_with_gpsUITests.swift; sourceTree = "<group>"; };
+		EC0C7B5E2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_simple_diary_with_gpsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC0C7B352C512F5200BD3583 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC0C7B4B2C512F5300BD3583 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC0C7B552C512F5300BD3583 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC0C7B2F2C512F5200BD3583 = {
+			isa = PBXGroup;
+			children = (
+				EC0C7B3A2C512F5200BD3583 /* iOS_simple_diary_with_gps */,
+				EC0C7B512C512F5300BD3583 /* iOS_simple_diary_with_gpsTests */,
+				EC0C7B5B2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests */,
+				EC0C7B392C512F5200BD3583 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC0C7B392C512F5200BD3583 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC0C7B382C512F5200BD3583 /* iOS_simple_diary_with_gps.app */,
+				EC0C7B4E2C512F5300BD3583 /* iOS_simple_diary_with_gpsTests.xctest */,
+				EC0C7B582C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC0C7B3A2C512F5200BD3583 /* iOS_simple_diary_with_gps */ = {
+			isa = PBXGroup;
+			children = (
+				EC0C7B3B2C512F5200BD3583 /* AppDelegate.swift */,
+				EC0C7B3D2C512F5200BD3583 /* SceneDelegate.swift */,
+				EC0C7B3F2C512F5200BD3583 /* ViewController.swift */,
+				EC0C7B412C512F5200BD3583 /* Main.storyboard */,
+				EC0C7B442C512F5200BD3583 /* Assets.xcassets */,
+				EC0C7B462C512F5200BD3583 /* LaunchScreen.storyboard */,
+				EC0C7B492C512F5200BD3583 /* Info.plist */,
+			);
+			path = iOS_simple_diary_with_gps;
+			sourceTree = "<group>";
+		};
+		EC0C7B512C512F5300BD3583 /* iOS_simple_diary_with_gpsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC0C7B522C512F5300BD3583 /* iOS_simple_diary_with_gpsTests.swift */,
+			);
+			path = iOS_simple_diary_with_gpsTests;
+			sourceTree = "<group>";
+		};
+		EC0C7B5B2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC0C7B5C2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.swift */,
+				EC0C7B5E2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift */,
+			);
+			path = iOS_simple_diary_with_gpsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC0C7B372C512F5200BD3583 /* iOS_simple_diary_with_gps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC0C7B622C512F5300BD3583 /* Build configuration list for PBXNativeTarget "iOS_simple_diary_with_gps" */;
+			buildPhases = (
+				EC0C7B342C512F5200BD3583 /* Sources */,
+				EC0C7B352C512F5200BD3583 /* Frameworks */,
+				EC0C7B362C512F5200BD3583 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOS_simple_diary_with_gps;
+			productName = iOS_simple_diary_with_gps;
+			productReference = EC0C7B382C512F5200BD3583 /* iOS_simple_diary_with_gps.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC0C7B4D2C512F5300BD3583 /* iOS_simple_diary_with_gpsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC0C7B652C512F5300BD3583 /* Build configuration list for PBXNativeTarget "iOS_simple_diary_with_gpsTests" */;
+			buildPhases = (
+				EC0C7B4A2C512F5300BD3583 /* Sources */,
+				EC0C7B4B2C512F5300BD3583 /* Frameworks */,
+				EC0C7B4C2C512F5300BD3583 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC0C7B502C512F5300BD3583 /* PBXTargetDependency */,
+			);
+			name = iOS_simple_diary_with_gpsTests;
+			productName = iOS_simple_diary_with_gpsTests;
+			productReference = EC0C7B4E2C512F5300BD3583 /* iOS_simple_diary_with_gpsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC0C7B572C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC0C7B682C512F5300BD3583 /* Build configuration list for PBXNativeTarget "iOS_simple_diary_with_gpsUITests" */;
+			buildPhases = (
+				EC0C7B542C512F5300BD3583 /* Sources */,
+				EC0C7B552C512F5300BD3583 /* Frameworks */,
+				EC0C7B562C512F5300BD3583 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC0C7B5A2C512F5300BD3583 /* PBXTargetDependency */,
+			);
+			name = iOS_simple_diary_with_gpsUITests;
+			productName = iOS_simple_diary_with_gpsUITests;
+			productReference = EC0C7B582C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC0C7B302C512F5200BD3583 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					EC0C7B372C512F5200BD3583 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					EC0C7B4D2C512F5300BD3583 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = EC0C7B372C512F5200BD3583;
+					};
+					EC0C7B572C512F5300BD3583 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = EC0C7B372C512F5200BD3583;
+					};
+				};
+			};
+			buildConfigurationList = EC0C7B332C512F5200BD3583 /* Build configuration list for PBXProject "iOS_simple_diary_with_gps" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC0C7B2F2C512F5200BD3583;
+			productRefGroup = EC0C7B392C512F5200BD3583 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC0C7B372C512F5200BD3583 /* iOS_simple_diary_with_gps */,
+				EC0C7B4D2C512F5300BD3583 /* iOS_simple_diary_with_gpsTests */,
+				EC0C7B572C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC0C7B362C512F5200BD3583 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC0C7B452C512F5200BD3583 /* Assets.xcassets in Resources */,
+				EC0C7B482C512F5200BD3583 /* Base in Resources */,
+				EC0C7B432C512F5200BD3583 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC0C7B4C2C512F5300BD3583 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC0C7B562C512F5300BD3583 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC0C7B342C512F5200BD3583 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC0C7B402C512F5200BD3583 /* ViewController.swift in Sources */,
+				EC0C7B3C2C512F5200BD3583 /* AppDelegate.swift in Sources */,
+				EC0C7B3E2C512F5200BD3583 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC0C7B4A2C512F5300BD3583 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC0C7B532C512F5300BD3583 /* iOS_simple_diary_with_gpsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC0C7B542C512F5300BD3583 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC0C7B5D2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.swift in Sources */,
+				EC0C7B5F2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC0C7B502C512F5300BD3583 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC0C7B372C512F5200BD3583 /* iOS_simple_diary_with_gps */;
+			targetProxy = EC0C7B4F2C512F5300BD3583 /* PBXContainerItemProxy */;
+		};
+		EC0C7B5A2C512F5300BD3583 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC0C7B372C512F5200BD3583 /* iOS_simple_diary_with_gps */;
+			targetProxy = EC0C7B592C512F5300BD3583 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC0C7B412C512F5200BD3583 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC0C7B422C512F5200BD3583 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC0C7B462C512F5200BD3583 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC0C7B472C512F5200BD3583 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC0C7B602C512F5300BD3583 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC0C7B612C512F5300BD3583 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC0C7B632C512F5300BD3583 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iOS_simple_diary_with_gps/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.studylemonkim.iOS-simple-diary-with-gps";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC0C7B642C512F5300BD3583 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iOS_simple_diary_with_gps/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.studylemonkim.iOS-simple-diary-with-gps";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC0C7B662C512F5300BD3583 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.studylemonkim.iOS-simple-diary-with-gpsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS_simple_diary_with_gps.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOS_simple_diary_with_gps";
+			};
+			name = Debug;
+		};
+		EC0C7B672C512F5300BD3583 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.studylemonkim.iOS-simple-diary-with-gpsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS_simple_diary_with_gps.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iOS_simple_diary_with_gps";
+			};
+			name = Release;
+		};
+		EC0C7B692C512F5300BD3583 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.studylemonkim.iOS-simple-diary-with-gpsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iOS_simple_diary_with_gps;
+			};
+			name = Debug;
+		};
+		EC0C7B6A2C512F5300BD3583 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.studylemonkim.iOS-simple-diary-with-gpsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iOS_simple_diary_with_gps;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC0C7B332C512F5200BD3583 /* Build configuration list for PBXProject "iOS_simple_diary_with_gps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC0C7B602C512F5300BD3583 /* Debug */,
+				EC0C7B612C512F5300BD3583 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC0C7B622C512F5300BD3583 /* Build configuration list for PBXNativeTarget "iOS_simple_diary_with_gps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC0C7B632C512F5300BD3583 /* Debug */,
+				EC0C7B642C512F5300BD3583 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC0C7B652C512F5300BD3583 /* Build configuration list for PBXNativeTarget "iOS_simple_diary_with_gpsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC0C7B662C512F5300BD3583 /* Debug */,
+				EC0C7B672C512F5300BD3583 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC0C7B682C512F5300BD3583 /* Build configuration list for PBXNativeTarget "iOS_simple_diary_with_gpsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC0C7B692C512F5300BD3583 /* Debug */,
+				EC0C7B6A2C512F5300BD3583 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC0C7B302C512F5200BD3583 /* Project object */;
+}
