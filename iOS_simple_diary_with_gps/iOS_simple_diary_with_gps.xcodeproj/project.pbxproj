@@ -16,6 +16,7 @@
 		EC0C7B532C512F5300BD3583 /* iOS_simple_diary_with_gpsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B522C512F5300BD3583 /* iOS_simple_diary_with_gpsTests.swift */; };
 		EC0C7B5D2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B5C2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.swift */; };
 		EC0C7B5F2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B5E2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift */; };
+		ECDF6FD42C52074A00DC3C52 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF6FD32C52074A00DC3C52 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		EC0C7B582C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_simple_diary_with_gpsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0C7B5C2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_simple_diary_with_gpsUITests.swift; sourceTree = "<group>"; };
 		EC0C7B5E2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_simple_diary_with_gpsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ECDF6FD32C52074A00DC3C52 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,8 @@
 				EC0C7B3B2C512F5200BD3583 /* AppDelegate.swift */,
 				EC0C7B3D2C512F5200BD3583 /* SceneDelegate.swift */,
 				EC0C7B3F2C512F5200BD3583 /* ViewController.swift */,
+				ECDF6FD22C52074000DC3C52 /* Model */,
+				ECDF6FCF2C52070500DC3C52 /* Repository */,
 				EC0C7B412C512F5200BD3583 /* Main.storyboard */,
 				EC0C7B442C512F5200BD3583 /* Assets.xcassets */,
 				EC0C7B462C512F5200BD3583 /* LaunchScreen.storyboard */,
@@ -125,6 +129,21 @@
 				EC0C7B5E2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift */,
 			);
 			path = iOS_simple_diary_with_gpsUITests;
+			sourceTree = "<group>";
+		};
+		ECDF6FCF2C52070500DC3C52 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		ECDF6FD22C52074000DC3C52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECDF6FD32C52074A00DC3C52 /* Post.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +280,7 @@
 				EC0C7B402C512F5200BD3583 /* ViewController.swift in Sources */,
 				EC0C7B3C2C512F5200BD3583 /* AppDelegate.swift in Sources */,
 				EC0C7B3E2C512F5200BD3583 /* SceneDelegate.swift in Sources */,
+				ECDF6FD42C52074A00DC3C52 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
