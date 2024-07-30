@@ -6,7 +6,11 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct Post {
+    var postId : Int
     var contents : String
+    var createdDate : Date
+    var location : CLLocationCoordinate2D
 }
