@@ -11,9 +11,9 @@ import CoreLocation
 
 enum PostEvent {
     case postLoaded
-    case postAdded(Post, Error?)
-    case postRemoved(Post, Error?)
-    case postReported(Post, Error?)
+    case postAdded(Post?, Error?)
+    case postRemoved(Int?, Error?)
+    case postReported(Int?, Error?)
 }
 
 protocol PostService {
@@ -61,19 +61,38 @@ class PostServiceImp : PostService {
         let currentDate = Date()
         let newPost = Post(postId: postId, contents: contents, createdDate: currentDate, location: self.currentLocation)
         
-        repository.addPost(post: newPost) { error in
+        repository.addPost(post: newPost) { [weak self] error in
+            if error == nil {
+                self?.subject.send(.postAdded(newPost, nil))
+            }
+            else
+            {
+                self?.subject.send(.postAdded(nil, error))
+            }
             }
     }
     
     func removePost(postId: Int) {
-        repository.removePost(postId: postId) { error in
-            
+        repository.removePost(postId: postId) { [weak self]  error in
+            if error == nil {
+                self?.subject.send(.postRemoved(postId, nil))
+            }
+            else
+            {
+                self?.subject.send(.postAdded(nil, error))
+            }
         }
     }
     
     func reportPost(postId: Int) {
-        repository.reportPost(postdId: postId) { error in
-            
+        repository.reportPost(postdId: postId) { [weak self]  error in
+            if error == nil {
+                self?.subject.send(.postReported(postId, nil))
+            }
+            else
+            {
+                self?.subject.send(.postAdded(nil, error))
+            }
         }
     }
     
