@@ -8,7 +8,8 @@
 import Foundation
 
 protocol PostRepository {
-    func loadPosts() -> [Post]
-    func addPost(post : Post) -> Bool
-    func removePost(post : Post) -> Bool
+    func loadPosts( completion: @escaping ([Post], Error?) -> Void)
+    func addPost(post : Post, completion: @escaping (Error?) -> Void)// 구현체에서 date 추가
+    func removePost(postId : Int, completion: @escaping (Error?) -> Void)
+    func reportPost(postdId: Int, completion: @escaping (Error?) -> Void)
 }
