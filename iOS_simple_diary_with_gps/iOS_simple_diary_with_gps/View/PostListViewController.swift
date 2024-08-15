@@ -42,7 +42,10 @@ class PostListViewController: UIViewController {
         listView.dataSource = self
         listView.delegate = self
         
-        listView.topAnchor.constraint(equalTo: self.view.safeAreaInsets.top)
+        listView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
+        listView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor)
+        listView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor)
+        listView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
         
         //파이어베이스 연동
         
