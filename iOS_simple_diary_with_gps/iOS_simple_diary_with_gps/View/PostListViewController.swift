@@ -19,7 +19,6 @@ class PostListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.setupListView()
         
         viewModel.onEvent.sink { event in
@@ -30,26 +29,31 @@ class PostListViewController: UIViewController {
                 break
             }
         }.store(in: &cancellable)
+        
+        viewModel.loadPostList()
     }
     
     func setupAddPostButton() {
     }
     
     func setupListView() {
+        
         listView = UITableView()
         
-        listView.register(nil, forCellReuseIdentifier: PostListCell.cellIdentifier())
+        listView.register(PostListViewCell.self, forCellReuseIdentifier: PostListViewCell.cellIdentifier())
         listView.dataSource = self
         listView.delegate = self
-        
-        listView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
-        listView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor)
-        listView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor)
-        listView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
-        
-        //파이어베이스 연동
+        listView.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(listView)
+        
+        NSLayoutConstraint.activate([
+            listView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            listView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            listView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            listView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
     }
     
 }
@@ -62,7 +66,7 @@ extension PostListViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PostListCell.cellIdentifier(), for: indexPath) as? PostListCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PostListViewCell.cellIdentifier(), for: indexPath) as? PostListViewCell
         else {
             return UITableViewCell()
         }
@@ -78,18 +82,5 @@ extension PostListViewController : UITableViewDataSource {
 extension PostListViewController : UITableViewDelegate
 {
     
-}
-
-
-class PostListCell : UITableViewCell {
-
-    static func cellIdentifier() -> String
-    {
-        return "PostListCell"
-    }
-    
-    func setData(post : Post) {
-        
-    }
 }
 
