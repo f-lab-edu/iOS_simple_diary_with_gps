@@ -38,11 +38,11 @@ class PostListViewController: UIViewController {
     func setupListView() {
         listView = UITableView()
         
-        listView.register(nil, forCellReuseIdentifier: PostListCell.cellIdentifier())
+//        listView.register(nil, forCellReuseIdentifier: PostListCell.cellIdentifier())
         listView.dataSource = self
         listView.delegate = self
         
-        listView.topAnchor.constraint(equalTo: self.view.safeAreaInsets.top)
+//        listView.topAnchor.constraint(equalTo: self.view.safeAreaInsets.top)
         
         //파이어베이스 연동
         
