@@ -16,6 +16,7 @@
 		EC0C7B532C512F5300BD3583 /* iOS_simple_diary_with_gpsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B522C512F5300BD3583 /* iOS_simple_diary_with_gpsTests.swift */; };
 		EC0C7B5D2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B5C2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.swift */; };
 		EC0C7B5F2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B5E2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift */; };
+		EC782E6B2C6DEAF6005C8AF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC782E6A2C6DEAF6005C8AF5 /* GoogleService-Info.plist */; };
 		ECBF7DAA2C590CAC0011BAF2 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF7DA92C590CAC0011BAF2 /* PostService.swift */; };
 		ECBF7DAE2C6503920011BAF2 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF7DAD2C6503920011BAF2 /* PostListViewController.swift */; };
 		ECBF7DB02C6503A40011BAF2 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF7DAF2C6503A40011BAF2 /* PostListViewModel.swift */; };
@@ -55,6 +56,7 @@
 		EC0C7B582C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_simple_diary_with_gpsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0C7B5C2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_simple_diary_with_gpsUITests.swift; sourceTree = "<group>"; };
 		EC0C7B5E2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_simple_diary_with_gpsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EC782E6A2C6DEAF6005C8AF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECBF7DA92C590CAC0011BAF2 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		ECBF7DAD2C6503920011BAF2 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		ECBF7DAF2C6503A40011BAF2 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		EC0C7B3A2C512F5200BD3583 /* iOS_simple_diary_with_gps */ = {
 			isa = PBXGroup;
 			children = (
+				EC782E6A2C6DEAF6005C8AF5 /* GoogleService-Info.plist */,
 				EC0C7B3B2C512F5200BD3583 /* AppDelegate.swift */,
 				EC0C7B3D2C512F5200BD3583 /* SceneDelegate.swift */,
 				EC0C7B3F2C512F5200BD3583 /* ViewController.swift */,
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC0C7B452C512F5200BD3583 /* Assets.xcassets in Resources */,
+				EC782E6B2C6DEAF6005C8AF5 /* GoogleService-Info.plist in Resources */,
 				EC0C7B482C512F5200BD3583 /* Base in Resources */,
 				EC0C7B432C512F5200BD3583 /* Base in Resources */,
 			);
