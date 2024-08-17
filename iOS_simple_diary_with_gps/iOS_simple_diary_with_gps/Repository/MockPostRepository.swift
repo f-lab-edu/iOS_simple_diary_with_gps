@@ -33,7 +33,7 @@ struct MockPostRepository : PostRepository {
         }
     }
     
-    func reportPost(postdId: Int, completion: @escaping ((any Error)?) -> Void) {
+    func reportPost(postId: Int, completion: @escaping ((any Error)?) -> Void) {
         DispatchQueue.main.async {
             completion(nil)
         }

@@ -10,10 +10,7 @@ import Combine
 import CoreLocation
 
 enum PostEvent {
-    case postLoaded
-    case postAdded(Post?, Error?)
-    case postRemoved(Int?, Error?)
-    case postReported(Int?, Error?)
+    case postUpdate
 }
 
 protocol PostService {
@@ -22,9 +19,9 @@ protocol PostService {
     var posts : [Post] { get }
     
     func loadPost(date : Date?, page : Int) // Date, page 파라미터 추가, //유저가 선택하는 정보
-    func addPost(contents: String) // contents
-    func removePost(postId : Int) // postId
-    func reportPost(postId: Int) // postId
+    func addPost(contents: String, completion: @escaping (Error?) -> Void) // contents
+    func removePost(postId : Int, completion: @escaping (Error?) -> Void) // postId
+    func reportPost(postId: Int, completion: @escaping (Error?) -> Void) // postId
 }
 
 class PostServiceImp : PostService {
@@ -35,18 +32,20 @@ class PostServiceImp : PostService {
     }
     
     var posts: [Post] = []
+    private var currentPage : Int = 0
     let userId : String = "mockdata" // 모듈화시키기
     var currentLocation : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0) //모듈화시키기. 계속 업데이트
     
     let repository : PostRepository = MockPostRepository()
-    let subject : PassthroughSubject<PostEvent, Never> = PassthroughSubject<PostEvent, Never>()
+    let subject : PassthroughSubject<PostEvent, Never> = PassthroughSubject<PostEvent, Never>() //CurrentValueSubject 마지막으로 보낸 값을 들고 있음, PassthroughSubject
+    //데이터를 리스트로 다 보낼 필요가 있는가!
     
     func loadPost(date : Date? = Date(), page : Int) {
         
         repository.loadPosts(){ [weak self] posts, error in
             if error == nil {
                 self?.posts = posts
-                self?.subject.send(.postLoaded)
+                self?.subject.send(.postUpdate)
             }
         }
         
@@ -54,45 +53,34 @@ class PostServiceImp : PostService {
 
     }
     
-    func addPost(contents: String) {
+    func addPost(contents: String, completion: @escaping (Error?) -> Void) {
         
         //postId를 앱에서 생성해야하는지? 어떻게 생성해야할지가 고민입니다.
-        var postId = 0
+        var postId = 0 //서버에서 생성하는 것으로
         let currentDate = Date()
         let newPost = Post(postId: postId, contents: contents, createdDate: currentDate, location: self.currentLocation)
         
         repository.addPost(post: newPost) { [weak self] error in
-            if error == nil {
-                self?.subject.send(.postAdded(newPost, nil))
+            if error == nil, let `self` = self {
+                self.loadPost(page: self.currentPage)
             }
-            else
-            {
-                self?.subject.send(.postAdded(nil, error))
-            }
-            }
-    }
-    
-    func removePost(postId: Int) {
-        repository.removePost(postId: postId) { [weak self]  error in
-            if error == nil {
-                self?.subject.send(.postRemoved(postId, nil))
-            }
-            else
-            {
-                self?.subject.send(.postAdded(nil, error))
-            }
+            completion(error)
+            
         }
     }
     
-    func reportPost(postId: Int) {
-        repository.reportPost(postdId: postId) { [weak self]  error in
-            if error == nil {
-                self?.subject.send(.postReported(postId, nil))
+    func removePost(postId: Int, completion: @escaping (Error?) -> Void) {
+        repository.removePost(postId: postId) { [weak self]  error in
+            if error == nil, let `self` = self {
+                self.loadPost(page: self.currentPage)
             }
-            else
-            {
-                self?.subject.send(.postAdded(nil, error))
-            }
+            completion(error)
+        }
+    }
+    
+    func reportPost(postId: Int, completion: @escaping (Error?) -> Void) {
+        repository.reportPost(postId: postId) { error in
+            completion(error)
         }
     }
     
