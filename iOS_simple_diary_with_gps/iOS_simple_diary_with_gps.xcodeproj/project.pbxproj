@@ -18,6 +18,7 @@
 		EC0C7B5F2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B5E2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift */; };
 		EC782E6B2C6DEAF6005C8AF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC782E6A2C6DEAF6005C8AF5 /* GoogleService-Info.plist */; };
 		EC782E6E2C6DEC95005C8AF5 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = EC782E6D2C6DEC95005C8AF5 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		EC782E722C6DF5C9005C8AF5 /* PostListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC782E712C6DF5C9005C8AF5 /* PostListViewCell.swift */; };
 		ECBF7DAA2C590CAC0011BAF2 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF7DA92C590CAC0011BAF2 /* PostService.swift */; };
 		ECBF7DAE2C6503920011BAF2 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF7DAD2C6503920011BAF2 /* PostListViewController.swift */; };
 		ECBF7DB02C6503A40011BAF2 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF7DAF2C6503A40011BAF2 /* PostListViewModel.swift */; };
@@ -58,6 +59,7 @@
 		EC0C7B5C2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_simple_diary_with_gpsUITests.swift; sourceTree = "<group>"; };
 		EC0C7B5E2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_simple_diary_with_gpsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EC782E6A2C6DEAF6005C8AF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC782E712C6DF5C9005C8AF5 /* PostListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewCell.swift; sourceTree = "<group>"; };
 		ECBF7DA92C590CAC0011BAF2 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		ECBF7DAD2C6503920011BAF2 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		ECBF7DAF2C6503A40011BAF2 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				EC0C7B3B2C512F5200BD3583 /* AppDelegate.swift */,
 				EC0C7B3D2C512F5200BD3583 /* SceneDelegate.swift */,
 				EC0C7B3F2C512F5200BD3583 /* ViewController.swift */,
+				EC782E732C6DFCA7005C8AF5 /* PostDetail */,
 				ECBF7DAB2C6503670011BAF2 /* View */,
 				ECBF7DAC2C65036B0011BAF2 /* ViewModel */,
 				ECBF7DA82C590C9E0011BAF2 /* Service */,
@@ -149,6 +152,13 @@
 			path = iOS_simple_diary_with_gpsUITests;
 			sourceTree = "<group>";
 		};
+		EC782E732C6DFCA7005C8AF5 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PostDetail;
+			sourceTree = "<group>";
+		};
 		ECBF7DA82C590C9E0011BAF2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				ECBF7DAD2C6503920011BAF2 /* PostListViewController.swift */,
+				EC782E712C6DF5C9005C8AF5 /* PostListViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +343,7 @@
 				EC0C7B402C512F5200BD3583 /* ViewController.swift in Sources */,
 				ECBF7DB02C6503A40011BAF2 /* PostListViewModel.swift in Sources */,
 				ECDF6FD82C5209AB00DC3C52 /* PostRepository.swift in Sources */,
+				EC782E722C6DF5C9005C8AF5 /* PostListViewCell.swift in Sources */,
 				ECBF7DAA2C590CAC0011BAF2 /* PostService.swift in Sources */,
 				EC0C7B3C2C512F5200BD3583 /* AppDelegate.swift in Sources */,
 				ECDF6FDA2C5209F500DC3C52 /* MockPostRepository.swift in Sources */,
