@@ -8,9 +8,17 @@
 import Foundation
 import CoreLocation
 
-struct Post {
+
+
+struct Post : Codable {
+    
+    struct Coordinate : Codable {
+        var long : Double
+        var lat  : Double
+    }
+    
     var postId : Int
     var contents : String
     var createdDate : Date
-    var location : CLLocationCoordinate2D
+    var location : Coordinate
 }

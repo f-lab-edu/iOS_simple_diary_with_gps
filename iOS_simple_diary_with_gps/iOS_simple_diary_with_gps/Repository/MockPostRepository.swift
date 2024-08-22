@@ -12,12 +12,12 @@ struct MockPostRepository : PostRepository {
 
     
     func loadPosts(completion: @escaping ([Post] , (any Error)?) -> Void) {
-        let post1 = Post(postId: 0, contents: "hello", createdDate: Date(), location: CLLocationCoordinate2D(latitude: 0, longitude: 0 ))
-        let post2 = Post(postId: 1, contents: "good\nnight", createdDate: Date(), location: CLLocationCoordinate2D(latitude: 0, longitude: 0 ))
-        let post3 = Post(postId: 2, contents: "longer\npost\nlonger\npost\n", createdDate: Date(), location: CLLocationCoordinate2D(latitude: 0, longitude: 0 ))
-        
+//        let post1 = Post(postId: 0, contents: "hello", createdDate: Date(), location: CLLocationCoordinate2D(latitude: 0, longitude: 0 ))
+//        let post2 = Post(postId: 1, contents: "good\nnight", createdDate: Date(), location: CLLocationCoordinate2D(latitude: 0, longitude: 0 ))
+//        let post3 = Post(postId: 2, contents: "longer\npost\nlonger\npost\n", createdDate: Date(), location: CLLocationCoordinate2D(latitude: 0, longitude: 0 ))
+//        
         DispatchQueue.main.async {
-            completion([post1, post2, post3], nil)
+//            completion([post1, post2, post3], nil)
         }
     }
     

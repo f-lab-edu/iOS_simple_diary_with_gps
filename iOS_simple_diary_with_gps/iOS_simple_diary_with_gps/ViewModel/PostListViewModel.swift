@@ -48,7 +48,7 @@ class PostListViewModel {
     }
     
     func addPost(contents : String) {
-        service.addPost(contents: contents) { [weak self] error in
+        service.addPost(contents: "test") { [weak self] error in
             self?.subject.send(.postAdded(error))
         }
     }

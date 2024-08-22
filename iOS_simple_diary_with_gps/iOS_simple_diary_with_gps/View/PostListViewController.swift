@@ -7,6 +7,8 @@
 
 import UIKit
 import Combine
+import FirebaseCore
+import FirebaseAuth
 
 class PostListViewController: UIViewController {
 
@@ -19,8 +21,16 @@ class PostListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupAddPostButton()
         self.setupListView()
         
+        Auth.auth().signInAnonymously { (authResult, error) in
+            if let error = error {
+                print("Authentication error: \(error.localizedDescription)")
+                return
+            }
+        }
+
         viewModel.onEvent.sink { event in
             switch event {
             case .postUpdated :
@@ -34,6 +44,10 @@ class PostListViewController: UIViewController {
     }
     
     func setupAddPostButton() {
+        let navigationItem = UIBarButtonItem(title: "add Post", image: nil, target: self, action: #selector(addButtonTapped))
+        navigationController?.navigationBar.tintColor = .blue
+        self.navigationItem.title = "PostList"
+        self.navigationItem.setRightBarButton(navigationItem, animated: false)
     }
     
     func setupListView() {
@@ -54,6 +68,10 @@ class PostListViewController: UIViewController {
             listView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
         ])
         
+    }
+    
+    @IBAction func addButtonTapped() {
+        self.viewModel.addPost(contents: "test")
     }
     
 }
