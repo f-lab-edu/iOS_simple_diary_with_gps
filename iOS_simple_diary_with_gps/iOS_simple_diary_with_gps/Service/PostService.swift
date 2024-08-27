@@ -20,8 +20,8 @@ protocol PostService {
     
     func loadPost(date : Date?, page : Int) // Date, page 파라미터 추가, //유저가 선택하는 정보
     func addPost(contents: String, completion: @escaping (Error?) -> Void) // contents
-    func removePost(postId : Int, completion: @escaping (Error?) -> Void) // postId
-    func reportPost(postId: Int, completion: @escaping (Error?) -> Void) // postId
+    func removePost(postId : String, completion: @escaping (Error?) -> Void) // postId
+    func reportPost(postId: String, completion: @escaping (Error?) -> Void) // postId
 }
 
 class PostServiceImp : PostService {
@@ -55,7 +55,7 @@ class PostServiceImp : PostService {
     
     func addPost(contents: String, completion: @escaping (Error?) -> Void) {
         
-        var postId = 0
+        var postId = "dfsdf"
         let currentDate = Date()
         let newPost = Post(postId: postId, contents: contents, createdDate: currentDate, location: Post.Coordinate.init(long: self.currentLocation.longitude, lat: self.currentLocation.latitude))
         
@@ -69,7 +69,7 @@ class PostServiceImp : PostService {
         }
     }
     
-    func removePost(postId: Int, completion: @escaping (Error?) -> Void) {
+    func removePost(postId: String, completion: @escaping (Error?) -> Void) {
         repository.removePost(postId: postId) { [weak self]  error in
             if error == nil, let `self` = self {
                 self.loadPost(page: self.currentPage)
@@ -78,7 +78,7 @@ class PostServiceImp : PostService {
         }
     }
     
-    func reportPost(postId: Int, completion: @escaping (Error?) -> Void) {
+    func reportPost(postId: String, completion: @escaping (Error?) -> Void) {
         repository.reportPost(postId: postId) { error in
             completion(error)
         }

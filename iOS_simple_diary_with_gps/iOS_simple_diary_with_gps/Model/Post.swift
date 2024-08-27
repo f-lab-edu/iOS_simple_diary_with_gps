@@ -17,7 +17,7 @@ struct Post : Codable {
         var lat  : Double
     }
     
-    var postId : Int
+    var postId : String
     var contents : String
     var createdDate : Date
     var location : Coordinate
