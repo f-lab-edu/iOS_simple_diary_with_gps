@@ -39,15 +39,6 @@ struct FirebasePostRepository : PostRepository {
             }
             
         }
-    
-                
-//        let post1 = Post(postId: 0, contents: "hello", createdDate: Date(), location: Post.Coordinate.init(long: 0, lat: 0))
-//                let post2 = Post(postId: 1, contents: "good\nnight", createdDate: Date(), location: Post.Coordinate.init(long: 0, lat: 0))
-//                let post3 = Post(postId: 2, contents: "longer\npost\nlonger\npost\n", createdDate: Date(), location: Post.Coordinate.init(long: 0, lat: 0))
-//        
-//                DispatchQueue.main.async {
-//                    completion([post1, post2, post3], nil)
-//                }
     }
     
     func addPost(post: Post, completion: @escaping ((any Error)?) -> Void) {
