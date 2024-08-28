@@ -27,13 +27,13 @@ struct MockPostRepository : PostRepository {
         }
     }
     
-    func removePost(postId: Int, completion: @escaping ((any Error)?) -> Void) {
+    func removePost(postId: String, completion: @escaping ((any Error)?) -> Void) {
         DispatchQueue.main.async {
             completion(nil)
         }
     }
     
-    func reportPost(postId: Int, completion: @escaping ((any Error)?) -> Void) {
+    func reportPost(postId: String, completion: @escaping ((any Error)?) -> Void) {
         DispatchQueue.main.async {
             completion(nil)
         }
