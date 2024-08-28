@@ -16,28 +16,22 @@ struct FirebasePostRepository : PostRepository {
     
     func loadPosts(completion: @escaping ([Post] , (any Error)?) -> Void) {
         
-        let docRef = Firestore.firestore().collection("mock").getDocuments { snapshot, err in
+        Firestore.firestore().collection("mock").whereField("city", isEqualTo: "성남").getDocuments { snapshot, err in
             
             if let err = err {
                 print(err)
             }
             else
             {
-                if let snapshot = snapshot {
-                    let posts = snapshot.documents.map { document in
-                        let data = document.data()
-                        let createdDate = data["createdDate"] as! Timestamp
-                        let location = data["location"] as! [String : Double]
-                        
-                        return Post.init(postId: document.documentID, contents: data["contents"] as! String, createdDate: createdDate.dateValue(), location: Post.Coordinate(long:location["long"]! , lat: location["lat"]!))
-                    } as! [Post]
-                    
-                    DispatchQueue.main.async {
+                let posts = snapshot?.documents.compactMap({ snapshot in
+                    let post = try? snapshot.data(as: Post.self)
+                    return post
+                }) as! [Post]
+                
+                DispatchQueue.main.async {
                     completion(posts, nil)
-                    }
                 }
             }
-            
         }
     }
     
