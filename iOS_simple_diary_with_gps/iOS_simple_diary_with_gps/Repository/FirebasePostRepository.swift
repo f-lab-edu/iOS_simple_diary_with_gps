@@ -29,7 +29,7 @@ struct FirebasePostRepository : PostRepository {
                         let createdDate = data["createdDate"] as! Timestamp
                         let location = data["location"] as! [String : Double]
                         
-                        return Post.init(postId: document.documentID, contents: data["contents"] as! String, createdDate: createdDate.dateValue(), location: Post.Coordinate(long:location["long"]! , lat: location["lat"]!))
+                        return Post.init(contents: data["contents"] as! String, createdDate: createdDate.dateValue(), location: Post.Coordinate(long:location["long"]! , lat: location["lat"]!))
                     } as! [Post]
                     
                     DispatchQueue.main.async {

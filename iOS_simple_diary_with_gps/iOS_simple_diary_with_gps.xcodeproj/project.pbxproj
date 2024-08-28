@@ -26,6 +26,7 @@
 		ECAEE48B2C772B1000170D6C /* PostListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAEE4862C772B1000170D6C /* PostListViewCell.swift */; };
 		ECAEE48C2C772B1000170D6C /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAEE4872C772B1000170D6C /* PostListViewController.swift */; };
 		ECAEE48D2C772B1000170D6C /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAEE4892C772B1000170D6C /* PostListViewModel.swift */; };
+		ECAEE48F2C7EBCC300170D6C /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = ECAEE48E2C7EBCC300170D6C /* FirebaseAuthCombine-Community */; };
 		ECBF7DAA2C590CAC0011BAF2 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF7DA92C590CAC0011BAF2 /* PostService.swift */; };
 		ECDF6FD42C52074A00DC3C52 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF6FD32C52074A00DC3C52 /* Post.swift */; };
 		ECDF6FD82C5209AB00DC3C52 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF6FD72C5209AB00DC3C52 /* PostRepository.swift */; };
@@ -90,6 +91,7 @@
 				EC782E6E2C6DEC95005C8AF5 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				ECF63E1C2C74BA0900EB1FDC /* FirebaseFirestore in Frameworks */,
 				ECAEE4852C74C6AC00170D6C /* FirebaseAuth in Frameworks */,
+				ECAEE48F2C7EBCC300170D6C /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +269,7 @@
 				ECF63E1B2C74BA0900EB1FDC /* FirebaseFirestore */,
 				ECF63E1D2C74BA0900EB1FDC /* FirebaseFirestoreCombine-Community */,
 				ECAEE4842C74C6AC00170D6C /* FirebaseAuth */,
+				ECAEE48E2C7EBCC300170D6C /* FirebaseAuthCombine-Community */,
 			);
 			productName = iOS_simple_diary_with_gps;
 			productReference = EC0C7B382C512F5200BD3583 /* iOS_simple_diary_with_gps.app */;
@@ -764,6 +767,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EC782E6C2C6DEB78005C8AF5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		ECAEE48E2C7EBCC300170D6C /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC782E6C2C6DEB78005C8AF5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
 		};
 		ECF63E1B2C74BA0900EB1FDC /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
