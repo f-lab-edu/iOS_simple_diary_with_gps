@@ -36,10 +36,11 @@ struct FirebasePostRepository : PostRepository {
     }
     
     func addPost(post: Post, completion: @escaping ((any Error)?) -> Void) {
-        
         do
         {
-            try Firestore.firestore().collection("mock").addDocument(from: post)
+            try Firestore.firestore().collection("mock").addDocument(from: post) { err in
+                completion(err)
+            }
         }
         catch
         {

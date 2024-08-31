@@ -19,7 +19,7 @@ struct Post : Codable {
         var lat  : Double
     }
     
-    
+    var city : String 
     var contents : String
     var createdDate : Date
     var location : Coordinate

@@ -14,7 +14,7 @@ class PostListViewCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(label)
+        self.contentView.addSubview(label)
         
         return label
     }()
