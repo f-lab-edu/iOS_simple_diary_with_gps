@@ -50,6 +50,10 @@ struct FirebasePostRepository : PostRepository {
     
     func removePost(postId: String, completion: @escaping ((any Error)?) -> Void) {
  
+    Firestore.firestore().collection("mock").document(postId).delete { err in
+                completion(err)
+        }
+        
     }
     
     func reportPost(postId: String, completion: @escaping ((any Error)?) -> Void) {

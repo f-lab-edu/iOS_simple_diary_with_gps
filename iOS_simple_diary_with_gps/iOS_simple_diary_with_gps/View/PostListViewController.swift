@@ -99,6 +99,13 @@ extension PostListViewController : UITableViewDataSource {
 
 extension PostListViewController : UITableViewDelegate
 {
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            viewModel.removePost(post: viewModel.posts[indexPath.row])
+        } else if editingStyle == .insert {
+                   
+        }
+    }
 }
 
