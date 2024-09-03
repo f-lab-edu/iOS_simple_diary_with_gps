@@ -99,12 +99,20 @@ extension PostListViewController : UITableViewDataSource {
 
 extension PostListViewController : UITableViewDelegate
 {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = self.viewModel.posts[indexPath.row]
+        let detailViewModel = PostDetailViewModel(service: PostServiceImp(), post: post)
+        let detailViewController = PostDetailViewController(viewModel: detailViewModel)
+        
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
             viewModel.removePost(post: viewModel.posts[indexPath.row])
         } else if editingStyle == .insert {
-                   
+            
         }
     }
 }

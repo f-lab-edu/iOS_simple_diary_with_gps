@@ -58,7 +58,7 @@ class PostServiceImp : PostService {
         
         let currentDate = Date()
         self.gpsService.requestLocationPermission()
-        
+
         let location = self.gpsService.currentLocation()
         let lat = location.coordinate.latitude
         let lon = location.coordinate.longitude
