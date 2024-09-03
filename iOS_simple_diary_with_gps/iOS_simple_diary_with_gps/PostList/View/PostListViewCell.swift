@@ -10,7 +10,7 @@ import UIKit
 class PostListViewCell: UITableViewCell {
     
     var contentsLabel : UILabel!
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }

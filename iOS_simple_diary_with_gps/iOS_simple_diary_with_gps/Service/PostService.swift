@@ -56,8 +56,7 @@ class PostServiceImp : PostService {
     func addPost(contents: String, completion: @escaping (Error?) -> Void) {
         
         let currentDate = Date()
-        let newPost = Post(contents: contents, createdDate: currentDate, location: Post.Coordinate.init(long: self.currentLocation.longitude, lat: self.currentLocation.latitude))
-        
+        let newPost = Post(city: "성남", contents: contents, createdDate: currentDate, location: Post.Coordinate.init(long: self.currentLocation.longitude, lat: self.currentLocation.latitude))
         
         repository.addPost(post: newPost) { [weak self] error in
             if error == nil, let `self` = self {

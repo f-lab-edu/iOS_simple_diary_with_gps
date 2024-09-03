@@ -16,45 +16,52 @@ struct FirebasePostRepository : PostRepository {
     
     func loadPosts(completion: @escaping ([Post] , (any Error)?) -> Void) {
         
-        let docRef = Firestore.firestore().collection("mock").getDocuments { snapshot, err in
+        Firestore.firestore().collection("mock").whereField("city", isEqualTo: "성남").getDocuments { snapshot, err in
             
             if let err = err {
-                print(err)
+                DispatchQueue.main.async {
+                    completion([], err)
+                }
             }
             else
             {
-                if let snapshot = snapshot {
-                    let posts = snapshot.documents.map { document in
-                        let data = document.data()
-                        let createdDate = data["createdDate"] as! Timestamp
-                        let location = data["location"] as! [String : Double]
-                        
-                        return Post.init(contents: data["contents"] as! String, createdDate: createdDate.dateValue(), location: Post.Coordinate(long:location["long"]! , lat: location["lat"]!))
-                    } as! [Post]
-                    
+                guard let posts = snapshot?.documents.compactMap({ snapshot in
+                    let post = try? snapshot.data(as: Post.self)
+                    return post
+                })
+                else {
                     DispatchQueue.main.async {
-                    completion(posts, nil)
+                        completion([], nil)
                     }
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    completion(posts, nil)
                 }
             }
-            
         }
     }
     
     func addPost(post: Post, completion: @escaping ((any Error)?) -> Void) {
-        
         do
         {
-            try Firestore.firestore().collection("mock").addDocument(from: post)
+            try Firestore.firestore().collection("mock").addDocument(from: post) { err in
+                completion(err)
+            }
         }
         catch
         {
-            NSLog("\(error) \(#function)")
+            completion(error)
         }
     }
     
     func removePost(postId: String, completion: @escaping ((any Error)?) -> Void) {
  
+        Firestore.firestore().collection("mock").document(postId).delete { err in
+            completion(err)
+        }
+        
     }
     
     func reportPost(postId: String, completion: @escaping ((any Error)?) -> Void) {
