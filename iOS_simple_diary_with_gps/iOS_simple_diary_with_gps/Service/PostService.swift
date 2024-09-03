@@ -34,7 +34,8 @@ class PostServiceImp : PostService {
     var posts: [Post] = []
     private var currentPage : Int = 0
     let userId : String = "mockdata" // 모듈화시키기
-    var currentLocation : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0) //모듈화시키기. 계속 업데이트
+    var gpsService = GPSServiceImp()
+    var cityService = NaverMapsCityService()
     
     let repository : PostRepository = FirebasePostRepository()
     let subject : PassthroughSubject<PostEvent, Never> = PassthroughSubject<PostEvent, Never>() //CurrentValueSubject 마지막으로 보낸 값을 들고 있음, PassthroughSubject
@@ -56,15 +57,26 @@ class PostServiceImp : PostService {
     func addPost(contents: String, completion: @escaping (Error?) -> Void) {
         
         let currentDate = Date()
-        let newPost = Post(city: "성남", contents: contents, createdDate: currentDate, location: Post.Coordinate.init(long: self.currentLocation.longitude, lat: self.currentLocation.latitude))
+        self.gpsService.requestLocationPermission()
         
+        let location = self.gpsService.currentLocation()
+        let lat = location.coordinate.latitude
+        let lon = location.coordinate.longitude
         
-        repository.addPost(post: newPost) { [weak self] error in
-            if error == nil, let `self` = self {
-                self.loadPost(page: self.currentPage)
-            }
-            completion(error)
+        self.cityService.currentCity(lat: lat, lon: lon) { cityName, error in
             
+            let cityName = cityName ?? "성남"
+            
+            let newPost = Post(city: cityName, contents: contents, createdDate: currentDate, location: Post.Coordinate.init(long: lon, lat: lat))
+            
+            
+            self.repository.addPost(post: newPost) { [weak self] error in
+                if error == nil, let `self` = self {
+                    self.loadPost(page: self.currentPage)
+                }
+                completion(error)
+                
+            }
         }
     }
     
