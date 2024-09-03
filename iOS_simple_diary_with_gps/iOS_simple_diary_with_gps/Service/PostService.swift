@@ -20,8 +20,8 @@ protocol PostService {
     
     func loadPost(date : Date?, page : Int) // Date, page 파라미터 추가, //유저가 선택하는 정보
     func addPost(contents: String, completion: @escaping (Error?) -> Void) // contents
-    func removePost(postId : Int, completion: @escaping (Error?) -> Void) // postId
-    func reportPost(postId: Int, completion: @escaping (Error?) -> Void) // postId
+    func removePost(postId : String, completion: @escaping (Error?) -> Void) // postId
+    func reportPost(postId: String, completion: @escaping (Error?) -> Void) // postId
 }
 
 class PostServiceImp : PostService {
@@ -36,7 +36,7 @@ class PostServiceImp : PostService {
     let userId : String = "mockdata" // 모듈화시키기
     var currentLocation : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0) //모듈화시키기. 계속 업데이트
     
-    let repository : PostRepository = MockPostRepository()
+    let repository : PostRepository = FirebasePostRepository()
     let subject : PassthroughSubject<PostEvent, Never> = PassthroughSubject<PostEvent, Never>() //CurrentValueSubject 마지막으로 보낸 값을 들고 있음, PassthroughSubject
     //데이터를 리스트로 다 보낼 필요가 있는가!
     
@@ -55,10 +55,9 @@ class PostServiceImp : PostService {
     
     func addPost(contents: String, completion: @escaping (Error?) -> Void) {
         
-        //postId를 앱에서 생성해야하는지? 어떻게 생성해야할지가 고민입니다.
-        var postId = 0 //서버에서 생성하는 것으로
         let currentDate = Date()
-        let newPost = Post(postId: postId, contents: contents, createdDate: currentDate, location: self.currentLocation)
+        let newPost = Post(city: "성남", contents: contents, createdDate: currentDate, location: Post.Coordinate.init(long: self.currentLocation.longitude, lat: self.currentLocation.latitude))
+        
         
         repository.addPost(post: newPost) { [weak self] error in
             if error == nil, let `self` = self {
@@ -69,7 +68,7 @@ class PostServiceImp : PostService {
         }
     }
     
-    func removePost(postId: Int, completion: @escaping (Error?) -> Void) {
+    func removePost(postId: String, completion: @escaping (Error?) -> Void) {
         repository.removePost(postId: postId) { [weak self]  error in
             if error == nil, let `self` = self {
                 self.loadPost(page: self.currentPage)
@@ -78,7 +77,7 @@ class PostServiceImp : PostService {
         }
     }
     
-    func reportPost(postId: Int, completion: @escaping (Error?) -> Void) {
+    func reportPost(postId: String, completion: @escaping (Error?) -> Void) {
         repository.reportPost(postId: postId) { error in
             completion(error)
         }

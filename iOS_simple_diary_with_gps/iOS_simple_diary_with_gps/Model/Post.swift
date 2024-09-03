@@ -7,10 +7,20 @@
 
 import Foundation
 import CoreLocation
+import FirebaseFirestore
 
-struct Post {
-    var postId : Int
+
+struct Post : Codable {
+    
+    @DocumentID var id : String?
+    
+    struct Coordinate : Codable {
+        var long : Double
+        var lat  : Double
+    }
+    
+    var city : String 
     var contents : String
     var createdDate : Date
-    var location : CLLocationCoordinate2D
+    var location : Coordinate
 }

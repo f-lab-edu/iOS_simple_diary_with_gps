@@ -48,19 +48,19 @@ class PostListViewModel {
     }
     
     func addPost(contents : String) {
-        service.addPost(contents: contents) { [weak self] error in
+        service.addPost(contents: "test") { [weak self] error in
             self?.subject.send(.postAdded(error))
         }
     }
     
     func removePost(post: Post) {
-        service.removePost(postId: post.postId) { [weak self] error in
+        service.removePost(postId: post.id!) { [weak self] error in
             self?.subject.send(.postRemoved(error))
         }
     }
     
     func reportPost(post: Post) {
-        service.reportPost(postId: post.postId) { [weak self] error in
+        service.reportPost(postId: post.id!) { [weak self] error in
             self?.subject.send(.postReported(error))
         }
     }
