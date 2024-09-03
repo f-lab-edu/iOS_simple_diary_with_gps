@@ -19,14 +19,22 @@ struct FirebasePostRepository : PostRepository {
         Firestore.firestore().collection("mock").whereField("city", isEqualTo: "성남").getDocuments { snapshot, err in
             
             if let err = err {
-                print(err)
+                DispatchQueue.main.async {
+                    completion([], err)
+                }
             }
             else
             {
-                let posts = snapshot?.documents.compactMap({ snapshot in
+                guard let posts = snapshot?.documents.compactMap({ snapshot in
                     let post = try? snapshot.data(as: Post.self)
                     return post
-                }) as! [Post]
+                })
+                else {
+                    DispatchQueue.main.async {
+                        completion([], nil)
+                    }
+                    return
+                }
                 
                 DispatchQueue.main.async {
                     completion(posts, nil)
@@ -44,14 +52,14 @@ struct FirebasePostRepository : PostRepository {
         }
         catch
         {
-            NSLog("\(error) \(#function)")
+            completion(error)
         }
     }
     
     func removePost(postId: String, completion: @escaping ((any Error)?) -> Void) {
  
-    Firestore.firestore().collection("mock").document(postId).delete { err in
-                completion(err)
+        Firestore.firestore().collection("mock").document(postId).delete { err in
+            completion(err)
         }
         
     }
