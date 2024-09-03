@@ -9,24 +9,24 @@ import UIKit
 
 class PostListViewCell: UITableViewCell {
     
-    lazy var contentsLabel : UILabel = {
-        
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.contentView.addSubview(label)
-        
-        return label
-    }()
-    
+    var contentsLabel : UILabel!
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+        setupContentsLabel()
         setupConstraints()
+    }
+    
+    func setupContentsLabel() {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        self.contentsLabel = label
+        self.contentView.addSubview(label)
     }
     
     func setupConstraints() {

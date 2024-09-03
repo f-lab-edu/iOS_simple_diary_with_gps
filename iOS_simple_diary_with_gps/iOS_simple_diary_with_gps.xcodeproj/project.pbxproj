@@ -18,11 +18,16 @@
 		EC0C7B5F2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C7B5E2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift */; };
 		EC782E6B2C6DEAF6005C8AF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC782E6A2C6DEAF6005C8AF5 /* GoogleService-Info.plist */; };
 		EC782E6E2C6DEC95005C8AF5 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = EC782E6D2C6DEC95005C8AF5 /* FirebaseAnalyticsWithoutAdIdSupport */; };
-		EC782E722C6DF5C9005C8AF5 /* PostListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC782E712C6DF5C9005C8AF5 /* PostListViewCell.swift */; };
+		EC782E772C70DB67005C8AF5 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC782E762C70DB67005C8AF5 /* PostDetailViewController.swift */; };
+		EC782E792C70DBC7005C8AF5 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC782E782C70DBC7005C8AF5 /* PostDetailViewModel.swift */; };
+		EC782E7C2C71EAAC005C8AF5 /* PostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC782E7B2C71EAAC005C8AF5 /* PostDetail.swift */; };
+		EC782E7E2C71EF1F005C8AF5 /* PostDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC782E7D2C71EF1F005C8AF5 /* PostDetailRepository.swift */; };
 		ECAEE4852C74C6AC00170D6C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ECAEE4842C74C6AC00170D6C /* FirebaseAuth */; };
+		ECAEE48B2C772B1000170D6C /* PostListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAEE4862C772B1000170D6C /* PostListViewCell.swift */; };
+		ECAEE48C2C772B1000170D6C /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAEE4872C772B1000170D6C /* PostListViewController.swift */; };
+		ECAEE48D2C772B1000170D6C /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAEE4892C772B1000170D6C /* PostListViewModel.swift */; };
+		ECAEE48F2C7EBCC300170D6C /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = ECAEE48E2C7EBCC300170D6C /* FirebaseAuthCombine-Community */; };
 		ECBF7DAA2C590CAC0011BAF2 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF7DA92C590CAC0011BAF2 /* PostService.swift */; };
-		ECBF7DAE2C6503920011BAF2 /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF7DAD2C6503920011BAF2 /* PostListViewController.swift */; };
-		ECBF7DB02C6503A40011BAF2 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF7DAF2C6503A40011BAF2 /* PostListViewModel.swift */; };
 		ECDF6FD42C52074A00DC3C52 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF6FD32C52074A00DC3C52 /* Post.swift */; };
 		ECDF6FD82C5209AB00DC3C52 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF6FD72C5209AB00DC3C52 /* PostRepository.swift */; };
 		ECDF6FDA2C5209F500DC3C52 /* MockPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF6FD92C5209F500DC3C52 /* MockPostRepository.swift */; };
@@ -63,10 +68,14 @@
 		EC0C7B5C2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_simple_diary_with_gpsUITests.swift; sourceTree = "<group>"; };
 		EC0C7B5E2C512F5300BD3583 /* iOS_simple_diary_with_gpsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_simple_diary_with_gpsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EC782E6A2C6DEAF6005C8AF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EC782E712C6DF5C9005C8AF5 /* PostListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewCell.swift; sourceTree = "<group>"; };
+		EC782E762C70DB67005C8AF5 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		EC782E782C70DBC7005C8AF5 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
+		EC782E7B2C71EAAC005C8AF5 /* PostDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetail.swift; sourceTree = "<group>"; };
+		EC782E7D2C71EF1F005C8AF5 /* PostDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailRepository.swift; sourceTree = "<group>"; };
+		ECAEE4862C772B1000170D6C /* PostListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostListViewCell.swift; sourceTree = "<group>"; };
+		ECAEE4872C772B1000170D6C /* PostListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		ECAEE4892C772B1000170D6C /* PostListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		ECBF7DA92C590CAC0011BAF2 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
-		ECBF7DAD2C6503920011BAF2 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
-		ECBF7DAF2C6503A40011BAF2 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		ECDF6FD32C52074A00DC3C52 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		ECDF6FD72C5209AB00DC3C52 /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
 		ECDF6FD92C5209F500DC3C52 /* MockPostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostRepository.swift; sourceTree = "<group>"; };
@@ -82,6 +91,7 @@
 				EC782E6E2C6DEC95005C8AF5 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				ECF63E1C2C74BA0900EB1FDC /* FirebaseFirestore in Frameworks */,
 				ECAEE4852C74C6AC00170D6C /* FirebaseAuth in Frameworks */,
+				ECAEE48F2C7EBCC300170D6C /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,8 +139,8 @@
 				EC0C7B3B2C512F5200BD3583 /* AppDelegate.swift */,
 				EC0C7B3D2C512F5200BD3583 /* SceneDelegate.swift */,
 				EC0C7B3F2C512F5200BD3583 /* ViewController.swift */,
-				ECBF7DAB2C6503670011BAF2 /* View */,
-				ECBF7DAC2C65036B0011BAF2 /* ViewModel */,
+				EC782E732C6DFCA7005C8AF5 /* PostDetail */,
+				EC782E7A2C71E7A4005C8AF5 /* PostList */,
 				ECBF7DA82C590C9E0011BAF2 /* Service */,
 				ECDF6FD22C52074000DC3C52 /* Model */,
 				ECDF6FCF2C52070500DC3C52 /* Repository */,
@@ -159,6 +169,57 @@
 			path = iOS_simple_diary_with_gpsUITests;
 			sourceTree = "<group>";
 		};
+		EC782E732C6DFCA7005C8AF5 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EC782E742C70DB43005C8AF5 /* View */,
+				EC782E752C70DB4C005C8AF5 /* ViewModel */,
+			);
+			path = PostDetail;
+			sourceTree = "<group>";
+		};
+		EC782E742C70DB43005C8AF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC782E762C70DB67005C8AF5 /* PostDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC782E752C70DB4C005C8AF5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC782E782C70DBC7005C8AF5 /* PostDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EC782E7A2C71E7A4005C8AF5 /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				ECAEE4882C772B1000170D6C /* View */,
+				ECAEE48A2C772B1000170D6C /* ViewModel */,
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
+		ECAEE4882C772B1000170D6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECAEE4862C772B1000170D6C /* PostListViewCell.swift */,
+				ECAEE4872C772B1000170D6C /* PostListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECAEE48A2C772B1000170D6C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ECAEE4892C772B1000170D6C /* PostListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		ECBF7DA82C590C9E0011BAF2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,29 +228,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		ECBF7DAB2C6503670011BAF2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				ECBF7DAD2C6503920011BAF2 /* PostListViewController.swift */,
-				EC782E712C6DF5C9005C8AF5 /* PostListViewCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		ECBF7DAC2C65036B0011BAF2 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				ECBF7DAF2C6503A40011BAF2 /* PostListViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		ECDF6FCF2C52070500DC3C52 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
 				ECDF6FD72C5209AB00DC3C52 /* PostRepository.swift */,
 				ECDF6FD92C5209F500DC3C52 /* MockPostRepository.swift */,
 				ECF63E192C74B7EE00EB1FDC /* FirebasePostRepository.swift */,
+				EC782E7D2C71EF1F005C8AF5 /* PostDetailRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -198,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				ECDF6FD32C52074A00DC3C52 /* Post.swift */,
+				EC782E7B2C71EAAC005C8AF5 /* PostDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +269,7 @@
 				ECF63E1B2C74BA0900EB1FDC /* FirebaseFirestore */,
 				ECF63E1D2C74BA0900EB1FDC /* FirebaseFirestoreCombine-Community */,
 				ECAEE4842C74C6AC00170D6C /* FirebaseAuth */,
+				ECAEE48E2C7EBCC300170D6C /* FirebaseAuthCombine-Community */,
 			);
 			productName = iOS_simple_diary_with_gps;
 			productReference = EC0C7B382C512F5200BD3583 /* iOS_simple_diary_with_gps.app */;
@@ -344,15 +391,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF63E1A2C74B7EE00EB1FDC /* FirebasePostRepository.swift in Sources */,
-				ECBF7DAE2C6503920011BAF2 /* PostListViewController.swift in Sources */,
+				ECAEE48D2C772B1000170D6C /* PostListViewModel.swift in Sources */,
 				EC0C7B402C512F5200BD3583 /* ViewController.swift in Sources */,
-				ECBF7DB02C6503A40011BAF2 /* PostListViewModel.swift in Sources */,
+				EC782E7E2C71EF1F005C8AF5 /* PostDetailRepository.swift in Sources */,
+				EC782E772C70DB67005C8AF5 /* PostDetailViewController.swift in Sources */,
 				ECDF6FD82C5209AB00DC3C52 /* PostRepository.swift in Sources */,
-				EC782E722C6DF5C9005C8AF5 /* PostListViewCell.swift in Sources */,
+				ECAEE48C2C772B1000170D6C /* PostListViewController.swift in Sources */,
+				EC782E792C70DBC7005C8AF5 /* PostDetailViewModel.swift in Sources */,
 				ECBF7DAA2C590CAC0011BAF2 /* PostService.swift in Sources */,
 				EC0C7B3C2C512F5200BD3583 /* AppDelegate.swift in Sources */,
+				EC782E7C2C71EAAC005C8AF5 /* PostDetail.swift in Sources */,
 				ECDF6FDA2C5209F500DC3C52 /* MockPostRepository.swift in Sources */,
 				EC0C7B3E2C512F5200BD3583 /* SceneDelegate.swift in Sources */,
+				ECAEE48B2C772B1000170D6C /* PostListViewCell.swift in Sources */,
 				ECDF6FD42C52074A00DC3C52 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -716,6 +767,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EC782E6C2C6DEB78005C8AF5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		ECAEE48E2C7EBCC300170D6C /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC782E6C2C6DEB78005C8AF5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
 		};
 		ECF63E1B2C74BA0900EB1FDC /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
