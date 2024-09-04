@@ -38,8 +38,7 @@ class PostServiceImp : PostService {
     var cityService = NaverMapsCityService()
     
     let repository : PostRepository = FirebasePostRepository()
-    let subject : PassthroughSubject<PostEvent, Never> = PassthroughSubject<PostEvent, Never>() //CurrentValueSubject 마지막으로 보낸 값을 들고 있음, PassthroughSubject
-    //데이터를 리스트로 다 보낼 필요가 있는가!
+    let subject : PassthroughSubject<PostEvent, Never> = PassthroughSubject<PostEvent, Never>()
     
     func loadPost(date : Date? = Date(), page : Int) {
         
@@ -49,8 +48,6 @@ class PostServiceImp : PostService {
                 self?.subject.send(.postUpdate)
             }
         }
-        
-        // date, gps, page
 
     }
     
@@ -65,17 +62,23 @@ class PostServiceImp : PostService {
         
         self.cityService.currentCity(lat: lat, lon: lon) { cityName, error in
             
-            let cityName = cityName ?? "성남"
-            
-            let newPost = Post(city: cityName, contents: contents, createdDate: currentDate, location: Post.Coordinate.init(long: lon, lat: lat))
-            
-            
-            self.repository.addPost(post: newPost) { [weak self] error in
-                if error == nil, let `self` = self {
-                    self.loadPost(page: self.currentPage)
-                }
+            if let error = error {
                 completion(error)
+            }
+            else
+            {
+                let cityName = cityName ?? "알 수 없음"
                 
+                let newPost = Post(city: cityName, contents: contents, createdDate: currentDate, location: Post.Coordinate.init(long: lon, lat: lat))
+                
+                
+                self.repository.addPost(post: newPost) { [weak self] error in
+                    if error == nil, let `self` = self {
+                        self.loadPost(page: self.currentPage)
+                    }
+                    completion(error)
+                    
+                }
             }
         }
     }

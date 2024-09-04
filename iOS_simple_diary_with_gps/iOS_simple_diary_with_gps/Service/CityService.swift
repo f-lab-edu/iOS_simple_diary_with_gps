@@ -20,18 +20,25 @@ struct NaverMapsCityService : CityService {
     
     struct NaverMapReverseGeocoderResponse : Codable {
         
-        var results : [Result]
+        var status : Status
+        
+        struct Status : Codable {
+            var code : Int
+            var name : String
+            var message : String
+        }
+        
+        var results : [Result]?
         
         struct Result : Codable {
-            var region : Region
+            var region : Region?
             
             struct Region : Codable {
+                var area1 : Area1?
                 
                 struct Area1 : Codable {
-                    var name : String
+                    var name : String?
                 }
-                
-                var area1 : Area1
             }
         }
         
@@ -43,9 +50,12 @@ struct NaverMapsCityService : CityService {
         let urlString = "https://naveropenapi.apigw.ntruss.com/map-reversegeocode/v2/gc"
         
         var url = URL(string: urlString)!
-        let coords = URLQueryItem(name: "coords", value: "\(lat),\(lon)")
+        let coords = URLQueryItem(name: "coords", value: "\(lon),\(lat)")
         let geoRequest = URLQueryItem(name: "request", value: "coordsToaddr")
-        url.append(queryItems: [geoRequest, coords])
+        let orders = URLQueryItem(name: "orders", value: "addr,admcode")
+        let sourcecrs = URLQueryItem(name: "sourcecrs", value: "epsg:4326")
+        let outputQuery = URLQueryItem(name: "output", value: "json")
+        url.append(queryItems: [geoRequest, coords, orders, outputQuery, sourcecrs])
 
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -73,8 +83,16 @@ struct NaverMapsCityService : CityService {
                 completion(nil, error)
                  return
              }
-              
-            completion(output.results.first!.region.area1.name, nil)
+            
+            guard let result = output.results?.first?.region?.area1?.name else
+            {
+                print("Error: No Result of City")
+                let error = NSError(domain: "IPError", code: -111)
+               completion(nil, error)
+                return
+            }
+            
+            completion(result, nil)
             
         }.resume()
         
