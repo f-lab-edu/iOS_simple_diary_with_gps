@@ -13,9 +13,16 @@ protocol GPSService {
     func currentLocation() -> CLLocation
 }
 
-class GPSServiceImp : GPSService {
+class GPSServiceImp : NSObject, GPSService {
     
-    let manager = CLLocationManager()
+    private var manager : CLLocationManager
+    
+    override init() {
+        manager = CLLocationManager()
+        super.init()
+        
+        manager.delegate = self
+    }
     
     func requestLocationPermission() {
         manager.requestWhenInUseAuthorization()
@@ -23,5 +30,30 @@ class GPSServiceImp : GPSService {
     
     func currentLocation() -> CLLocation {
         return manager.location ?? CLLocation(latitude: 0, longitude: 0)
+    }
+}
+
+extension GPSServiceImp : CLLocationManagerDelegate {
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+               case .authorizedAlways, .authorizedWhenInUse:
+                   print("GPS: 권한 있음")
+               case .restricted, .notDetermined:
+                   print("GPS: 아직 선택하지 않음")
+               case .denied:
+                   print("GPS: 권한 없음")
+               default:
+                   print("GPS: Default")
+               }
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: any Error) {
+        print(error)
     }
 }

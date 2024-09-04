@@ -397,11 +397,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF63E1A2C74B7EE00EB1FDC /* FirebasePostRepository.swift in Sources */,
-				ECBF7DAE2C6503920011BAF2 /* PostListViewController.swift in Sources */,
 				ECE5CF772C870C83003E8E56 /* GPSService.swift in Sources */,
 				EC0C7B402C512F5200BD3583 /* ViewController.swift in Sources */,
 				ECE5CF792C870CD2003E8E56 /* CityService.swift in Sources */,
-				ECBF7DB02C6503A40011BAF2 /* PostListViewModel.swift in Sources */,
 				ECAEE48D2C772B1000170D6C /* PostListViewModel.swift in Sources */,
 				EC0C7B402C512F5200BD3583 /* ViewController.swift in Sources */,
 				EC782E7E2C71EF1F005C8AF5 /* PostDetailRepository.swift in Sources */,
@@ -599,6 +597,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_simple_diary_with_gps/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "게시글의 위치를 저장하기 위해서 앱 사용 시의 위치 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "게시글의 위치를 저장하기 위해서 앱 사용 시의 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -626,6 +626,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_simple_diary_with_gps/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "게시글의 위치를 저장하기 위해서 앱 사용 시의 위치 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "게시글의 위치를 저장하기 위해서 앱 사용 시의 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
