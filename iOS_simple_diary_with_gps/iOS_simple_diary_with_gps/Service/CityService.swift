@@ -95,8 +95,6 @@ struct NaverMapsCityService : CityService {
             completion(result, nil)
             
         }.resume()
-        
-        //region.area1.name
     }
 }
 
