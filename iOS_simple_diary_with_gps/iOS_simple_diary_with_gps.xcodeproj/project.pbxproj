@@ -33,6 +33,8 @@
 		ECDF6FDA2C5209F500DC3C52 /* MockPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF6FD92C5209F500DC3C52 /* MockPostRepository.swift */; };
 		ECE5CF772C870C83003E8E56 /* GPSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5CF762C870C83003E8E56 /* GPSService.swift */; };
 		ECE5CF792C870CD2003E8E56 /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5CF782C870CD2003E8E56 /* CityService.swift */; };
+		ECE5CF7E2C8846E0003E8E56 /* PostWritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5CF7D2C8846E0003E8E56 /* PostWritingViewController.swift */; };
+		ECE5CF802C884874003E8E56 /* PostWriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5CF7F2C884874003E8E56 /* PostWriteViewModel.swift */; };
 		ECF63E1A2C74B7EE00EB1FDC /* FirebasePostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63E192C74B7EE00EB1FDC /* FirebasePostRepository.swift */; };
 		ECF63E1C2C74BA0900EB1FDC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ECF63E1B2C74BA0900EB1FDC /* FirebaseFirestore */; };
 		ECF63E1E2C74BA0900EB1FDC /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = ECF63E1D2C74BA0900EB1FDC /* FirebaseFirestoreCombine-Community */; };
@@ -83,6 +85,8 @@
 		ECDF6FD92C5209F500DC3C52 /* MockPostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostRepository.swift; sourceTree = "<group>"; };
 		ECE5CF762C870C83003E8E56 /* GPSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSService.swift; sourceTree = "<group>"; };
 		ECE5CF782C870CD2003E8E56 /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
+		ECE5CF7D2C8846E0003E8E56 /* PostWritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWritingViewController.swift; sourceTree = "<group>"; };
+		ECE5CF7F2C884874003E8E56 /* PostWriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWriteViewModel.swift; sourceTree = "<group>"; };
 		ECF63E192C74B7EE00EB1FDC /* FirebasePostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePostRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +147,7 @@
 				EC0C7B3B2C512F5200BD3583 /* AppDelegate.swift */,
 				EC0C7B3D2C512F5200BD3583 /* SceneDelegate.swift */,
 				EC0C7B3F2C512F5200BD3583 /* ViewController.swift */,
+				ECE5CF7C2C8846C5003E8E56 /* PostWriting */,
 				EC782E732C6DFCA7005C8AF5 /* PostDetail */,
 				EC782E7A2C71E7A4005C8AF5 /* PostList */,
 				ECBF7DA82C590C9E0011BAF2 /* Service */,
@@ -252,6 +257,31 @@
 				EC782E7B2C71EAAC005C8AF5 /* PostDetail.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ECE5CF7C2C8846C5003E8E56 /* PostWriting */ = {
+			isa = PBXGroup;
+			children = (
+				ECE5CF812C884DD1003E8E56 /* View */,
+				ECE5CF822C884DD9003E8E56 /* ViewModel */,
+			);
+			path = PostWriting;
+			sourceTree = "<group>";
+		};
+		ECE5CF812C884DD1003E8E56 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECE5CF7D2C8846E0003E8E56 /* PostWritingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECE5CF822C884DD9003E8E56 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ECE5CF7F2C884874003E8E56 /* PostWriteViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +432,7 @@
 				ECE5CF792C870CD2003E8E56 /* CityService.swift in Sources */,
 				ECAEE48D2C772B1000170D6C /* PostListViewModel.swift in Sources */,
 				EC0C7B402C512F5200BD3583 /* ViewController.swift in Sources */,
+				ECE5CF7E2C8846E0003E8E56 /* PostWritingViewController.swift in Sources */,
 				EC782E7E2C71EF1F005C8AF5 /* PostDetailRepository.swift in Sources */,
 				EC782E772C70DB67005C8AF5 /* PostDetailViewController.swift in Sources */,
 				ECDF6FD82C5209AB00DC3C52 /* PostRepository.swift in Sources */,
@@ -409,6 +440,7 @@
 				EC782E792C70DBC7005C8AF5 /* PostDetailViewModel.swift in Sources */,
 				ECBF7DAA2C590CAC0011BAF2 /* PostService.swift in Sources */,
 				EC0C7B3C2C512F5200BD3583 /* AppDelegate.swift in Sources */,
+				ECE5CF802C884874003E8E56 /* PostWriteViewModel.swift in Sources */,
 				EC782E7C2C71EAAC005C8AF5 /* PostDetail.swift in Sources */,
 				ECDF6FDA2C5209F500DC3C52 /* MockPostRepository.swift in Sources */,
 				EC0C7B3E2C512F5200BD3583 /* SceneDelegate.swift in Sources */,
