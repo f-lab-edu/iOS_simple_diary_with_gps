@@ -40,13 +40,16 @@ class PostListViewController: UIViewController {
             }
         }.store(in: &cancellable)
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         viewModel.loadPostList()
     }
     
     func setupAddPostButton() {
         let navigationItem = UIBarButtonItem(title: "add Post", image: nil, target: self, action: #selector(addButtonTapped))
         navigationController?.navigationBar.tintColor = .blue
-        self.navigationItem.title = "PostList"
         self.navigationItem.setRightBarButton(navigationItem, animated: false)
     }
     
@@ -71,9 +74,12 @@ class PostListViewController: UIViewController {
     }
     
     @IBAction func addButtonTapped() {
-        self.viewModel.addPost(contents: "test")
+        
+        let writeViewController = PostWritingViewController(viewModel: PostWriteViewModel(service: PostServiceImp(), post: nil))
+        let nav = UINavigationController(rootViewController: writeViewController)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true)
     }
-    
 }
 
 extension PostListViewController : UITableViewDataSource {
