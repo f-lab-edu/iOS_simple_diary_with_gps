@@ -9,8 +9,14 @@ import Foundation
 import MapKit
 
 protocol GPSService {
+
     func requestLocationPermission()
-    func currentLocation() -> CLLocation
+    func currentLocation() -> GPSServiceLocation
+}
+
+struct GPSServiceLocation {
+    var lat : Double
+    var long : Double
 }
 
 class GPSServiceImp : NSObject, GPSService {
@@ -28,8 +34,15 @@ class GPSServiceImp : NSObject, GPSService {
         manager.requestWhenInUseAuthorization()
     }
     
-    func currentLocation() -> CLLocation {
-        return manager.location ?? CLLocation(latitude: 0, longitude: 0)
+    func currentLocation() -> GPSServiceLocation {
+        
+        if let location = manager.location {
+            return GPSServiceLocation(lat: location.coordinate.latitude, long: location.coordinate.longitude)
+        }
+        else
+        {
+            return GPSServiceLocation(lat: 0, long: 0)
+        }
     }
 }
 
