@@ -34,11 +34,11 @@ class PostServiceImp : PostService {
     var posts: [Post] = []
     private var currentPage : Int = 0
     let userId : String = "mockdata" // 모듈화시키기
-    var currentLocation : CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0) //모듈화시키기. 계속 업데이트
+    var gpsService = GPSServiceImp()
+    var cityService = NaverMapsCityService()
     
     let repository : PostRepository = FirebasePostRepository()
-    let subject : PassthroughSubject<PostEvent, Never> = PassthroughSubject<PostEvent, Never>() //CurrentValueSubject 마지막으로 보낸 값을 들고 있음, PassthroughSubject
-    //데이터를 리스트로 다 보낼 필요가 있는가!
+    let subject : PassthroughSubject<PostEvent, Never> = PassthroughSubject<PostEvent, Never>()
     
     func loadPost(date : Date? = Date(), page : Int) {
         
@@ -48,22 +48,42 @@ class PostServiceImp : PostService {
                 self?.subject.send(.postUpdate)
             }
         }
-        
-        // date, gps, page
 
     }
     
     func addPost(contents: String, completion: @escaping (Error?) -> Void) {
         
         let currentDate = Date()
-        let newPost = Post(city: "성남", contents: contents, createdDate: currentDate, location: Post.Coordinate.init(long: self.currentLocation.longitude, lat: self.currentLocation.latitude))
+        self.gpsService.requestLocationPermission()
+
+        let location = self.gpsService.currentLocation()
+        let lat = location.lat
+        let lon = location.long
         
-        repository.addPost(post: newPost) { [weak self] error in
-            if error == nil, let `self` = self {
-                self.loadPost(page: self.currentPage)
-            }
-            completion(error)
+        self.cityService.currentCity(lat: lat, lon: lon) { cityName, error in
             
+            if let error = error {
+                completion(error)
+            }
+            else
+            {
+                let cityName = cityName ?? "알 수 없음"
+                
+                let newPost = Post(city: cityName, contents: contents, createdDate: currentDate, location: Post.Coordinate.init(long: lon, lat: lat))
+                
+                
+                self.repository.addPost(post: newPost) { [weak self] error in
+                    if error == nil, let `self` = self {
+                        
+                        //레포지터리에 리스너를 붙여보기 - 매번 로드 포스트를 호출하기 불편하니까. 
+                        //옵티미스틱 업데이트 - 서비스에 있는 걸 먼저 조정하고, 먼저 뷰모델에 업데이트 이벤트를 날림
+                        //에러가 발생했을 때만 원복 시키기.
+                        self.loadPost(page: self.currentPage)
+                    }
+                    completion(error)
+                    
+                }
+            }
         }
     }
     

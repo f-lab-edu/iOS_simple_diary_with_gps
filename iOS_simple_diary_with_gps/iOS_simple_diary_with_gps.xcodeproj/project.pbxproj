@@ -31,6 +31,8 @@
 		ECDF6FD42C52074A00DC3C52 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF6FD32C52074A00DC3C52 /* Post.swift */; };
 		ECDF6FD82C5209AB00DC3C52 /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF6FD72C5209AB00DC3C52 /* PostRepository.swift */; };
 		ECDF6FDA2C5209F500DC3C52 /* MockPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF6FD92C5209F500DC3C52 /* MockPostRepository.swift */; };
+		ECE5CF772C870C83003E8E56 /* GPSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5CF762C870C83003E8E56 /* GPSService.swift */; };
+		ECE5CF792C870CD2003E8E56 /* CityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5CF782C870CD2003E8E56 /* CityService.swift */; };
 		ECE5CF7E2C8846E0003E8E56 /* PostWritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5CF7D2C8846E0003E8E56 /* PostWritingViewController.swift */; };
 		ECE5CF802C884874003E8E56 /* PostWriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5CF7F2C884874003E8E56 /* PostWriteViewModel.swift */; };
 		ECF63E1A2C74B7EE00EB1FDC /* FirebasePostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF63E192C74B7EE00EB1FDC /* FirebasePostRepository.swift */; };
@@ -81,6 +83,8 @@
 		ECDF6FD32C52074A00DC3C52 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		ECDF6FD72C5209AB00DC3C52 /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
 		ECDF6FD92C5209F500DC3C52 /* MockPostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostRepository.swift; sourceTree = "<group>"; };
+		ECE5CF762C870C83003E8E56 /* GPSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSService.swift; sourceTree = "<group>"; };
+		ECE5CF782C870CD2003E8E56 /* CityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityService.swift; sourceTree = "<group>"; };
 		ECE5CF7D2C8846E0003E8E56 /* PostWritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWritingViewController.swift; sourceTree = "<group>"; };
 		ECE5CF7F2C884874003E8E56 /* PostWriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWriteViewModel.swift; sourceTree = "<group>"; };
 		ECF63E192C74B7EE00EB1FDC /* FirebasePostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePostRepository.swift; sourceTree = "<group>"; };
@@ -228,6 +232,8 @@
 		ECBF7DA82C590C9E0011BAF2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				ECE5CF762C870C83003E8E56 /* GPSService.swift */,
+				ECE5CF782C870CD2003E8E56 /* CityService.swift */,
 				ECBF7DA92C590CAC0011BAF2 /* PostService.swift */,
 			);
 			path = Service;
@@ -421,6 +427,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF63E1A2C74B7EE00EB1FDC /* FirebasePostRepository.swift in Sources */,
+				ECE5CF772C870C83003E8E56 /* GPSService.swift in Sources */,
+				EC0C7B402C512F5200BD3583 /* ViewController.swift in Sources */,
+				ECE5CF792C870CD2003E8E56 /* CityService.swift in Sources */,
 				ECAEE48D2C772B1000170D6C /* PostListViewModel.swift in Sources */,
 				EC0C7B402C512F5200BD3583 /* ViewController.swift in Sources */,
 				ECE5CF7E2C8846E0003E8E56 /* PostWritingViewController.swift in Sources */,
@@ -620,6 +629,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_simple_diary_with_gps/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "게시글의 위치를 저장하기 위해서 앱 사용 시의 위치 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "게시글의 위치를 저장하기 위해서 앱 사용 시의 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -647,6 +658,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS_simple_diary_with_gps/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "게시글의 위치를 저장하기 위해서 앱 사용 시의 위치 권한이 필요합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "게시글의 위치를 저장하기 위해서 앱 사용 시의 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

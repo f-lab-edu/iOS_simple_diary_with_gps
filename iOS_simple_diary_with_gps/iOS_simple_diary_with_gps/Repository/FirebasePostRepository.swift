@@ -16,7 +16,7 @@ struct FirebasePostRepository : PostRepository {
     
     func loadPosts(completion: @escaping ([Post] , (any Error)?) -> Void) {
         
-        Firestore.firestore().collection("mock").whereField("city", isEqualTo: "성남").getDocuments { snapshot, err in
+        Firestore.firestore().collection("mock").getDocuments { snapshot, err in
             
             if let err = err {
                 DispatchQueue.main.async {
